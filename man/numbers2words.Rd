@@ -5,6 +5,7 @@
 numbers2words(x)
 }
 \description{
+modification of function included in Global Environment
 Converts numbers to words. cap1 capitilises 11-90. cap2 capitilises 1-10
 }
 \examples{

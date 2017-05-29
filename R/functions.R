@@ -260,7 +260,7 @@ F_aov <- function(a){
 
 df_aov <- function(a){
   aov <- a
-  print(paste0(c(aov1[[1]][["Df"]]," ", ",")[c(1,3,4,2)]))
+  print(paste0(c(aov1[[1]][["Df"]]," ", ",")[c(1,4,3,2)]))
 
 }
 

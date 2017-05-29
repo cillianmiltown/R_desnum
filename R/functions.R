@@ -247,10 +247,8 @@ p_aov <- function(a){
     print(paste0("<"," ",".001"))
 
   if(aov[[1]][["Pr(>F)"]][1] > .001)
-<<<<<<< HEAD
+
     formatC(aov[[1]][["Pr(>F)"]][1], digits=3)
-=======
->>>>>>> 75ea3e75c28d97a664604fe660a2563523bd57ea
 
 }
 

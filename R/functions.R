@@ -243,11 +243,18 @@ t_paired_paragraph <- function(x,y,measure){
 
 p_aov <- function(a){
   aov <- a
-  if(aov[[1]][["Pr(>F)"]][1] < .001)
-    print(paste0("<"," ",".001"))
+  b <- aov[[1]][["Pr(>F)"]][1]
+  d <- length(strsplit(as.character(c),"")[[1]])
+  c <- print(formatC(b,digits = 3))
+  e <- round(b,digits = 3)
 
+  if (b < 0.001)
+    print(paste0("<", " ", ".001"))
   else
-    print(paste0("="," ",formatC(aov[[1]][["Pr(>F)"]][1], digits=3)))
+    if (d>4)
+      print(paste0("=", " ", e))
+  else
+    print(paste0("=", " ", c))
 
 }
 

@@ -244,8 +244,8 @@ t_paired_paragraph <- function(x,y,measure){
 p_aov <- function(a){
   aov <- a
   b <- aov[[1]][["Pr(>F)"]][1]
-  d <- length(strsplit(as.character(c),"")[[1]])
   c <- print(formatC(b,digits = 3))
+  d <- length(strsplit(as.character(c),"")[[1]])
   e <- round(b,digits = 3)
 
   if (b < 0.001)

@@ -269,6 +269,18 @@ df_aov <- function(a){
 
 }
 
+p_report <- function(b){
+  c <- print(formatC(b, digits = 3))
+  d <- length(strsplit(as.character(c), "")[[1]])
+  e <- round(b, digits = 3)
+  if (b < 0.001)
+    print(paste0("<", " ", ".001"))
+  else if (d > 4)
+    print(paste0("=", " ", e))
+  else print(paste0("=", " ", c))
+
+}
+
 toto <- function(){
   print("I hope this works")
 

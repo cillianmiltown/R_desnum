@@ -246,9 +246,7 @@ p_aov <- function(a){
   if(aov[[1]][["Pr(>F)"]][1] < .001)
     print(paste0("<"," ",".001"))
 
-  if(aov[[1]][["Pr(>F)"]][1] > .001)
-
-
+  else
     print(paste0("="," ",formatC(aov[[1]][["Pr(>F)"]][1], digits=3)))
 
 }

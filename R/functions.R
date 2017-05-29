@@ -241,9 +241,28 @@ t_paired_paragraph <- function(x,y,measure){
   #cat("An independent samples t-test revealed no difference in initial rating between the", labels[1], "sample (M =", m[1],", SD =", sd[1],") and the ",labels[2], "sample (M =", m[2],", SD =", sd[2],") t(",d_f,") = ",t$statistic,", p = ",t$p.value,".", quote = FALSE)
 }
 
+p_aov <- function(a){
+  aov <- a
+  if(aov[[1]][["Pr(>F)"]][1] < .001)
+    print(paste0("<"," ",".001"))
 
+  if(aov[[1]][["Pr(>F)"]][1] > .001)
+    print(aov[[1]][["Pr(>F)"]][1])
+
+}
+
+F_aov <- function(a){
+  aov <- a
+  print(aov[[1]][["F value"]][1])
+}
+
+df_aov <- function(a){
+  aov <- a
+  print(paste0(c(aov1[[1]][["Df"]]," ", ",")[c(1,3,4,2)]))
+
+}
 
 toto <- function(){
   print("I hope this works")
-  
+
 }

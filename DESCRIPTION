@@ -1,12 +1,14 @@
 Package: desnum
 Type: Package
 Title: Creates some useful functions
-Version: 0.1.0
-Author: Cillian McHugh
-Maintainer: <cillian.miltown@gmail.com>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
-Encoding: UTF-8
+Description: Functions for speeding up workflow, and working with R Markdown.
+Version: 0.1.1
+Date: 2017-5-31
+Authors@R: person("Cillian", "McHugh", email = "cillian.miltown@gmail.com", role = c("aut", "cre")
+URL: https://github.com/cillianmiltown/R_desnum
+Imports: car
 LazyData: true
-Year: 2017
+Author: Cillian McHugh [aut, cre]
+Maintainer: Cillian McHugh <cillian.miltown@gmail.com>
+Repository: github
+Date/Publication: 2017-05-31

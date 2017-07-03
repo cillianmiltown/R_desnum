@@ -267,12 +267,7 @@ df_aov <- function(a){
 }
 
 p_report <- function (b){
-<<<<<<< HEAD
 
-=======
-  c <- print(formatC(b, digits = 3))
-  d <- length(strsplit(as.character(c), "")[[1]])
->>>>>>> 799b1af68b9775d6888cf7b3b2ae9f180878bab1
   e <- round(b, digits = 3)
   if (b < 0.001)
     print(paste0("<", " ", ".001"))

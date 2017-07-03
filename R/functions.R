@@ -244,17 +244,14 @@ t_paired_paragraph <- function(x,y,measure){
 p_aov <- function(a){
   aov <- a
   b <- aov[[1]][["Pr(>F)"]][1]
-  c <- print(formatC(b,digits = 3))
-  d <- length(strsplit(as.character(c),"")[[1]])
+
   e <- round(b,digits = 3)
 
   if (b < 0.001)
     print(paste0("<", " ", ".001"))
   else
-    if (d>4)
-      print(paste0("=", " ", e))
-  else
-    print(paste0("=", " ", c))
+    print(paste0("=", " ", sub("^(-?)0.", "\\1.", sprintf("%.3f", e))))
+
 
 }
 
@@ -269,15 +266,13 @@ df_aov <- function(a){
 
 }
 
-p_report <- function(b){
-  c <- print(formatC(b, digits = 3))
-  d <- length(strsplit(as.character(c), "")[[1]])
+p_report <- function (b){
+
   e <- round(b, digits = 3)
   if (b < 0.001)
     print(paste0("<", " ", ".001"))
-  else if (d > 4)
-    print(paste0("=", " ", e))
-  else print(paste0("=", " ", c))
+  else
+    print(paste0("=", " ", sub("^(-?)0.", "\\1.", sprintf("%.3f", e))))
 
 }
 

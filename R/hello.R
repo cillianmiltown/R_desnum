@@ -240,3 +240,15 @@ t_paired_paragraph <- function(x,y,measure){
   if(tp>.05) print(paste0("A paired samples t-test revealed no difference in ", measure," from time one, (M = ", mx,", SD = ", sdx,"), to time two, (M =", my,", SD = ", sdy,"), t(",d_f,") = ",ts,", p = ",tp,"."), quote = FALSE)
   #cat("An independent samples t-test revealed no difference in initial rating between the", labels[1], "sample (M =", m[1],", SD =", sd[1],") and the ",labels[2], "sample (M =", m[2],", SD =", sd[2],") t(",d_f,") = ",t$statistic,", p = ",t$p.value,".", quote = FALSE)
 }
+
+
+mean2 <- function(x){
+  sub("^(-?)0.", "\\1.", sprintf("%.2f", round(mean(x,na.rm=TRUE),digits=2)))
+}
+
+
+
+sd2 <- function(x){
+  sub("^(-?)0.", "\\1.", sprintf("%.2f", round(sd(x,na.rm=TRUE),digits=2)))
+}
+

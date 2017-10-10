@@ -5,7 +5,7 @@
 numbers2words(x)
 }
 \description{
-modification of function included in Global Environment
+modification of function taken from John Fox http://tolstoy.newcastle.edu.au/R/help/05/04/2715.html
 Converts numbers to words. cap1 capitilises 11-90. cap2 capitilises 1-10
 }
 \examples{
